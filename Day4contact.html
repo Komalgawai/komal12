@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>contact</title>
+    </head>
+    <style>
+        table{
+            background-color: rgba(204, 193, 46,.2);
+            
+            
+            
+        }
+        body{
+
+            
+background-image: url("u3.png");
+background-size: 100% 100%;
+background-attachment: fixed;
+
+
+
+
+}
+    </style>
+
+    <body>
+       <form action="contact.html" >
+        <table border="20" cellpadding="10" cellspacing= 2 align="center">
+           
+            <tr>
+                <th>Parameter </th>
+                <th>Values </th>
+
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td> <input type="text" name="name" placeholder="Name" required > </td>
+
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td> <input type="text" name="Email" placeholder="Email" required > </td>
+
+            </tr>
+
+            <tr>
+                <td>Phone No</td>
+                <td> <input type="tel" name="Phone no" placeholder="Phone no" required> </td>
+
+            </tr>
+            <tr>
+                <td>Other Details</td>
+                <td> <input type="text" name="Details" placeholder="Other Details" > </td>
+
+            </tr>
+            <tr>
+                <td colspan="3"><input type="submit" name="submit " value="submit your feedback" onclick="myfun()" >
+                    
+                
+                </td>
+               
+                    
+            </tr>
+
+        </table>
+</form>
+
+
+
+
+    </body>
+
+
+</html>
+<script>
+    function myfun()
+    {
+        alert("Thank you for contact")
+    }
+</script>

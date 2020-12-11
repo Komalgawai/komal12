@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script>
+   function fun()
+   {
+       arr=['shiv','ayush','yasho','rushi','piyush']
+      
+       for(let index=0;index<arr.length;index++){
+
+        uname=document.getElementById("uid").value;
+
+          if(uname==arr[index]){
+            document.getElementById("myid1").innerHTML="already register"
+                break;
+          }
+          
+                
+            else
+            document.getElementById("myid2").innerHTML="You are registered"
+                break;
+
+       }
+       
+              
+   } 
+   
+     
+</script>	
+</head>
+<body>
+    User Name:<input type="text" id="uid">
+    <input type="button" value="click me" onclick=fun()>
+    <div id="myid1" style="background-color: rgb(231, 47, 155);"></div>
+    <div id="myid2" style="background-color: rgb(180, 79, 12);"></div>
+    
+
+</body>
+</html>

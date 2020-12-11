@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Using Div</title>
+    <style>
+          .grid-container{
+              display: grid;
+              grid-template-columns: auto auto auto;
+              grid-gap: 30px;
+              
+             background-image: url(k.jpeg);
+              
+
+          }
+          .grid-container>div{
+              
+              height: 300px;
+              width: 200px;
+              font-size: 20px;
+              text-align: center;
+          }
+    </style>
+    
+</head>
+<body>
+    
+    <div class="grid-container">
+        <div><img src="koms.jpg" width="200px" height="200px" style="margin-left: 100px; padding: 20px;"></div>
+        <div style="text-align: left;">
+            Name:<b><span>Komal Gawai</span></b><br>
+            Collage:<b><span>VIT</span></b><br>
+            Branch:<b><span>ENTC</span></b><br>
+            City:<b><span>Amravati</span></b><br>
+            Hobby:<b><span>Dancing</span></b>
+            </div>    
+    
+   
+        <div><p contenteditable="true" style="text-align: left;padding: -20px;">
+            I am komal milind gawai from amravati.
+            I have completed B.tech in ENTC from VIT
+            I am passionate about to do the work in web development.
+            my hobby is I love dancing.
+            my strength are consistancy and committed to my work.</p></div>
+        
+    </div>
+</body>
+</html>
