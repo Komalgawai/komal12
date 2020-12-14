@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>register</title>
+
+        <script>
+            function validation(){
+                user=document.getElementById("name").value;
+                pass=document.getElementById("password").value;
+                phonee=document.getElementById("phone").value;
+                emaill=document.getElementById("email").value;
+                
+            if(validationname(user) && validationname1(user)){
+                   
+                    
+                }
+             if(validationpassword(pass)){
+                   
+            }
+             if (validationage(phonee)){
+                  
+            }
+             if (validationemail(emaill)){
+                  
+            }
+            
+    
+    
+    alert("Thank You for registration")
+    document.myform.submit();
+            
+
+            }   
+
+              
+            function validationname(user){
+                if(user==''){
+                    alert("Please enter your name"); 
+                    document.myform.Name.focus();  
+                    document.myform.Name.value();   
+                }
+                    
+                else if((user.length<=5) && (user.length>=15)){
+                    alert("Name should be greater than 3 and less than 15");
+                    document.myform.Name.focus();
+                    document.myform.Name.value();
+
+                }
+                else
+                    return true;
+            }
+
+            function validationname1(user){
+                
+                userarray=['komal','monika','vishu']
+                for (index=0;index<userarray.length;index++){
+                    if(user==userarray[index]){
+                        alert("Already Exits")
+                        document.myform.Name.focus();
+                        document.myform.Name.value();
+                        return flag=false;
+                    }
+                    else{
+                        return true;
+                    }
+
+                }
+                if(flag){
+                    return true;
+                }
+                
+
+                }
+
+            function validationpassword(pass){
+                
+                if(pass=='' || (!pass.match(/[A-Z]/)) || (!pass.match(/[a-z]/)) || (!pass.match(/[0-9]/)) ||(!pass.match(/[!@#$%^&*()]/)) ){
+                    alert("Password should have lowercase,uppercase and one special char");
+                    
+                    
+                    document.myform.password.focus();
+                    document.myform.password.value();
+                    return false;
+                    
+                
+               }
+               return true;
+                   
+            }
+
+            function validationage(phonee){
+                
+                 if(phonee==''){
+                 alert("Enter the your age:");  
+                 
+                 document.myform.phoneNo.focus();
+                 document.myform.phoneNo.value();
+                 return false;
+    
+                }
+             return true;
+       
+            }
+
+            function validationemail(emaill){
+                 
+                var address=(/^[a-zA-Z0-9_\-\.]+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/)
+                 if(emaill==''|| address.test(emaill)==false){
+                    alert("Please Enter valid");
+                    
+                    document.myform.email.focus();
+                    document.myform.email.value();
+                    return (false);      
+    
+                }
+             return true;
+       
+            }    
+              
+            
+        
+                    
+                        
+        </script>
+
+
+
+    </head>
+    <body>
+        <form name="myform" action="array.html">
+
+
+
+            <table border="5" cellpadding="5" cellspacing= 2 align="center">
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" name="Name" id="name"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" id="password"></td>
+                </tr>
+                <tr>
+                    <td>Phone no</td>
+                    <td><input type="number" name="phoneNo" id="phone"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button"  value="submit" onclick= "validation()" ></td>
+                </tr>
+
+
+
+            </table>
+           
+
+        </form>
+            
+
+    
+    </body>
+
+
+</html>
