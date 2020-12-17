@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Using Div</title>
+
+
+    <script>
+        function display( num){
+            document.getElementById("inputt").value+=num;
+        }
+
+        function Resultt(){
+        
+                 var x= document.getElementById("inputt").value;
+                 var y=eval(x);
+                 document.getElementById("inputt").value=y;      
+
+            }
+
+
+        function clearr(){
+            document.getElementById("inputt").value= " ";
+        }
+
+        
+        function Sinresult(){
+            var x=document.getElementById("inputt").value;
+            var y=Math.sin(x);
+            document.getElementById("inputt").value=y;
+            
+        }
+
+
+        function Cosresult(){
+            var x=document.getElementById("inputt").value;
+            var y=Math.cos(x);
+            document.getElementById("inputt").value=y;
+
+        }
+
+
+        function Tanresult(){
+            var x=document.getElementById("inputt").value;
+            var y=Math.tan(x);
+            document.getElementById("inputt").value=y;
+
+        }
+
+
+        function power(){
+                 var x= document.getElementById("inputt").value;
+                 var y= document.getElementById("inputt").value;
+                 z=Math.pow(x,y);
+                 document.getElementById("inputt").value=z;
+             }
+
+
+    </script>
+
+
+
+
+    <style>
+          .grid-container{
+              display: grid;
+              grid-template-columns: auto auto auto auto;
+              grid-gap: 20px;
+              width: 400px;
+              
+             margin-left: 500px;
+              
+
+          }
+          .grid-container>div{
+              
+              
+              padding: 10px;
+              font-size: 20px;
+              text-align: center;
+          }
+          input{
+              border-radius: 50%;
+              width: 50px;
+              height: 50px;
+              border: none;
+              background-color: rgb(182, 187, 182);
+          }
+          #inputt{
+              font-size: 30px;
+              border-radius: 0%;
+          }
+    </style>
+    
+</head>
+<body>
+    <div style="margin-left:500px;"><input style="width: 390px; height: 50px; color: #000;" type="tel" placeholder="Enter values" id="inputt"></div>
+    <div class="grid-container">
+        
+        
+        <div><input  type="button" value=" clear" onclick="clearr()"  /></div>
+        <div><input type="button" value=" 0 "onclick="display('0')"  /></div>
+        <div><input id="myid" type="button" value=" . "onclick="display('.')"/></div>
+        <div><input id="myid" type="button" value=" + " onclick="display('+')" /></div>
+
+        <div><input type="button" value=" 7 "onclick="display('7')"  /></div>
+        <div><input type="button" value=" 8" onclick="display('8')" /></div>
+         <div><input type="button" value="9" onclick="display('9')" /></div>
+        <div><input id="myid" type="button" value=" -" onclick="display('-')" /></div>
+
+        <div><input type="button" value=" 4 " onclick="display('4')" /></div>
+        <div><input type="button" value=" 5" onclick="display('5')" /></div>
+        <div><input type="button" value=" 6 " onclick="display('6')" /></div>   
+        <div><input id="myid" type="button" value=" * " onclick="display('*')" /></div>
+
+        <div><input type="button" value="1" onclick="display('1')" /></div>
+        <div><input type="button" value=" 2 " onclick="display('2')" /></div>
+        <div><input type="button" value=" 3 " onclick="display('3')" /></div>
+        <div><input id="myid" type="button" value=" /" onclick="display('/')"  /></div>
+
+         <div><input id="myid" type="button" value=" ^ " onclick="power()" /></div>   
+        <div><input id="myid" type="button" value=" sin" onclick="Sinresult()" /></div>
+        <div><input id="myid" type="button" value=" cos" onclick="Cosresult()"  /></div>
+        <div><input id="myid" type="button" value=" tan " onclick="Tanresult()" /></div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div><input type="button" value=" =" onclick="Resultt()" /></div>
+
+        
+    </div>
+</body>
+</html>
